@@ -58,7 +58,7 @@ $(document).ready(function () {
     else if (currentShape.color) {
      currentShape,goodBehavior = "spin"
     }
-    
+  }
     function handleStatic (data) {
       setBackgroundWithObject(data);
       animationDetails.displayType = 1;
@@ -100,7 +100,7 @@ $(document).ready(function () {
       handleBad (currentShape, repeat)
     }
 
-  }
+  
 
   /////////////////////////////////////////////////
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
