@@ -11,11 +11,10 @@ function runProgram(){
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   var FRAME_RATE = 60;
   var KEY = {
-    ENTER: 13,
-    "LEFT": 65,
-    "UP": 87,
-    "RIGHT": 68,
-    "DOWN": 83
+    "LEFT": 37,
+    "UP": 38,
+    "RIGHT": 39,
+    "DOWN": 40
   };
   var walker = {
     positionX: 0,
@@ -39,9 +38,9 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    repositionGameItem()
-    wallCollision()
-
+    repositionGameItem();
+    wallCollision();
+redrawGameItem();
   }
   function handleKeyUp(event) {
     console.log(event.which)
@@ -71,10 +70,10 @@ function runProgram(){
       walker.speedX = 5
       console.log ("right pressed")
     } else if (event.which === KEY.UP) {
-      walker.speedY = 5
+      walker.speedY = -5
       console.log ("up pressed")
     } else if (event.which === KEY.DOWN) {
-      walker.speedY = -5
+      walker.speedY = 5
       console.log ("down pressed")
     }
   }
@@ -85,8 +84,8 @@ function runProgram(){
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
 function repositionGameItem(){
-  walker.positionX += walker.speedX
-  walker.positionY += walker.speedY // update the position of the box along the x-axis
+  walker.positionX += walker.speedX;
+  walker.positionY += walker.speedY; // update the position of the box along the x-axis
 }
 
 function redrawGameItem(){
