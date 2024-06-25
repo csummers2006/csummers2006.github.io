@@ -28,7 +28,7 @@ function runProgram(){
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
-  $(document).on('keydown', handleKeyUp) 
+  $(document).on('keyup', handleKeyUp) 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -40,8 +40,9 @@ function runProgram(){
   function newFrame() {
     repositionGameItem();
     wallCollision();
-redrawGameItem();
+   redrawGameItem();
   }
+
   function handleKeyUp(event) {
     console.log(event.which)
     if (event.which === KEY.LEFT) {
@@ -78,7 +79,7 @@ redrawGameItem();
     }
   }
 // press the up key --> accelerate the box in negative Y direct and positive
-  }
+  
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
@@ -97,9 +98,9 @@ function redrawGameItem(){
       walker.positionX = 390
     } else if (walker.positionY > 390) {
       walker.positionY = 390
-    } else if (walker.positionX > 0) {
+    } else if (walker.positionX < 0) {
       walker.positionX = 0
-    }else if (walker.positionY > 0) {
+    }else if (walker.positionY < 0) {
       walker.positionY = 0
     }
   }
@@ -111,4 +112,4 @@ function redrawGameItem(){
     $(document).off();
   }
   
-
+}
