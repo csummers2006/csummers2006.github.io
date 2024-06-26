@@ -23,6 +23,16 @@ if ([j] < array[j -1]){
 }
 // TODO 3: Implement quickSort
 function quickSort (array, left, right){
+if ((right - left) > 0){
+}
+index = partition(array, left, right)
+if (left < (index -1)){
+
+}
+quickSort(array, left, index - 1)
+if (index < right){
+    quickSo
+}
 
 }
 

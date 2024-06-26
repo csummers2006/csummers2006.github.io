@@ -140,7 +140,7 @@ function moveSnake() {
   }
   repositionSquare(snake.head);
   if (snake.head.direction === "up") {
-    snake.head.column = snake.head.column - 1;
+    snake.head.row = snake.head.row - 1;
   }
   repositionSquare(snake.head);
   if (snake.head.direction === "right") {
@@ -148,7 +148,7 @@ function moveSnake() {
   }
   repositionSquare(snake.head);
   if (snake.head.direction === "down") {
-    snake.head.column = snake.head.column + 1;
+    snake.head.row = snake.head.row + 1;
   }
   repositionSquare(snake.head);
 }
@@ -177,7 +177,7 @@ function hasCollidedWithApple() {
  return true;
   } 
   else {
-  return false;
+  return false
 }
 }
 function handleAppleCollision() {
