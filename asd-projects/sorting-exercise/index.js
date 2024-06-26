@@ -15,15 +15,27 @@ The CSS ids you will work with are:
 
 // TODO 2: Implement bubbleSort
 
-
+async function bubbleSort (array){
+for ( i = 0; i = array.length - 1);
+    for (j = array.length -1; j = 1 + 1);
+if ([j] < array[j -1]){
+    return swap (array[j] && array[j - 1])
+}
 // TODO 3: Implement quickSort
+function quickSort (array, left, right){
 
+}
 
 // TODOs 4 & 5: Implement partition
 
 
 // TODO 1: Implement swap
-
+function swap (array, i, j) {
+    swap = array[i]
+    array[i] = array[j]
+    array[j] = swap
+}
+drawSwap(array, i, j)
 
 ///////////////////////////////////////////////////////////////////////
 /////////////////////// YOUR WORK GOES ABOVE HERE /////////////////////
